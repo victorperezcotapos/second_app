@@ -14,11 +14,11 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <td><%= student.name %></td>
-        <td><%= student.age %></td>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class = "col-4"><%= student.name %></td>
+        <td class = "col-4"><%= student.age %></td>
+        <td class="btn btn-primary text-white"><%= link_to 'Show', student %></td>
+        <td class="btn btn-warning text-white"><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td class="btn btn-danger text-white"><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
